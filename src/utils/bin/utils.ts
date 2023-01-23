@@ -7,80 +7,32 @@ export const help = async (args: string[]): Promise<string> => {
   return `Available commands:\n${commands}\n\n[tab]\t trigger completion.\n[ctrl+l] clear terminal.\n[ctrl+c] cancel command.`;
 };
 
-export const echo = async (args: string[]): Promise<string> => {
-  return args.join(' ');
+
+export const contact = async (args: string[]): Promise<string> => {
+  return 'Drop us an email message at hello@flintblocks.io to get in touch and discuss what we can do for you';
 };
 
-export const whoami = async (args: string[]): Promise<string> => {
-  return 'guest';
-};
 
-export const date = async (args: string[]): Promise<string> => {
-  return new Date().toString();
-};
-
-export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://m4tt72.com', '_self');
-
-  return 'Opening GUI version...';
-};
-
-export const email = async (args: string[]): Promise<string> => {
-  window.open('mailto:hi@nm4tt72.com');
-
-  return 'Opening mailto:hi@m4tt72.com...';
-};
-
-export const vi = async (args: string[]): Promise<string> => {
-  return `why use vi? try 'emacs'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `why use vim? try 'emacs'.`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `really? emacs? you should be using 'vim'`;
-};
-
-export const sudo = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-  }, 1000);
-
-  return `Permission denied: unable to run the command '${args[0]}' as root.`;
-};
-
-export const repo = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open('https://github.com/m4tt72/terminal', '_blank');
-  }, 1000);
-
-  return 'Opening repository...';
-};
-
-export const donate = async (args?: string[]): Promise<string> => {
-  window.open(packageJson.funding.url, '_blank');
-
-  return 'Opening donation url...';
-};
 
 export const banner = (args?: string[]): string => {
   return `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
-
-Type 'help' to see list of available commands.
-
+   ____ __   __ _  __ _____ ___   __   _    __  _     ___
+  / __// /  / // |/ //_  _// o.) / / ,' \\ ,'_/ / //7,' _/
+ / _/ / /_ / // || /  / / / o \\ / /_/ o |/ /_ /  ,'_\\ \`. 
+/_/  /___//_//_/|_/  /_/ /___,'/___/|_,' |__//_/\\\\/___,' 
+                                                         v${packageJson.version}
 --
-The project is open-source 🎉 type 'repo' to check out the repository.
+Flintblocks is a web3 consultancy firm based in Singapore 🦁
+We're founded in 2023 in the year of the rabbit 🐇
+Here are the list of available commands to get you started 💯💯
 
-New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
-New 🎉: New command 'neofetch', for you linux.
+Type any of this commands in this website ⌨
+
+[Commands] 
+about - Bring up the about page
+contact - Show how to drop us a message
+projects - All the projects that we've done so far
+services - What we offer to founders creating their new DeFi projects!
 --
 `;
 };

@@ -45,3 +45,4 @@ bin/
 _static/
 
 .vscode/
+.idea/
