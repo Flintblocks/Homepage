@@ -1,5 +1,6 @@
 import packageJson from '../../../package.json';
 import * as bin from './index';
+import {getServices} from "../../api";
 
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
@@ -13,6 +14,11 @@ export const contact = async (args: string[]): Promise<string> => {
 };
 
 
+export const services = async (args: string[]): Promise<string> => {
+  const bio = await getServices();
+
+  return bio;
+};
 
 export const banner = (args?: string[]): string => {
   return `
